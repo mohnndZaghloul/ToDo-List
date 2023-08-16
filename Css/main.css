@@ -1,0 +1,215 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+}
+:root{
+    --mainColor: #6F1E51;
+    --liteMain: #833471;
+    --secondColor: #D980FA;
+    --liteSecond: #FDA7DF;
+    --delete: #EA2027;
+    --update: #12CBC4;
+    --edit: #F79F1F;
+    --editlite: #FFC312;
+}
+html{
+    height: 100vh;
+    scroll-behavior: smooth;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secondColor);
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 2px;
+    height: 2px;
+  }
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: var(--secondColor);
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--mainColor);
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--liteMain);
+  }
+  
+
+.header{
+    font-size: 5rem;
+    font-weight: 600;
+    text-align: center;
+}
+.half-header{
+    color: var(--mainColor);
+}
+.main{
+    background-color: var(--mainColor);
+    padding: 30px;
+    min-width: 1000px;
+}
+.input-field{
+    margin: 10px 20px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.input-task{
+    width: 100%;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    color: white;
+    outline: none;
+    border: none;
+    padding: 10px 70px 10px 20px;
+    font-size: 2rem;
+    background-color: var(--liteMain);
+    border-radius: 16px
+}
+.add-btn{
+    color: white;
+    background-color: var(--secondColor);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    font-size: 3.5rem;
+    position: absolute;
+    right: -10px;
+    cursor: pointer;
+    transition: all 0.4s;
+    border: var(--mainColor) 4px solid;
+}
+.add-btn:hover{
+    transform: rotate(90deg);
+    background-color: var(--liteSecond);
+}
+.tasks{
+    background-color: var(--secondColor);
+    margin: 10px 20px;
+    padding: 20px;
+    max-height: 400px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.task{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-radius: 16px;
+    background-color: #83347188;
+}
+.task:not(:last-child){
+    margin-bottom: 8px;
+}
+.btn{
+    color: white;
+    padding: 6px 12px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    margin-right: 10px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    transition: all 0.4s;
+}
+.update{
+    background-color: var(--update);
+}
+.update:hover{
+    background-color: #2d9894;
+}
+.edit{
+    background-color: var(--editlite);
+}
+.edit:hover{
+    background-color: var(--edit);
+}
+.delete{
+    background-color: var(--delete);
+}
+.delete:hover{
+    background-color: #be0f15;
+}
+.task-name{
+    display: inline-block;
+    overflow: auto;
+    max-width: 720px;
+    font-size: 1.4rem;
+}
+.empty{
+    text-align: center;
+    padding: 10px;
+}
+.empty-text{
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--mainColor);
+}
+@media (max-width: 992px) {
+    .main{
+        min-width: 800px;
+        max-width: 880px;
+    }
+    .task-name{
+        max-width: 420px;
+    }
+}
+@media (max-width: 768px) {
+    html{
+        font-size: 12px;
+    }
+    .main{
+        min-width: 560px;
+        max-width: 670px;
+    }
+    .task{
+        padding: 10px;
+    }
+    .btn {
+        margin-right: 8px;
+    }
+    .task-name{
+        max-width: 240px;
+    }
+}
+@media (max-width: 576px) {
+    html{
+        font-size: 10px;
+    }
+    .main{
+        min-width: 300px;
+        max-width: 380px;
+        padding: 8px;
+    }
+    .task{
+        padding: 8px;
+    }
+    .btn {
+        font-size: 10px;
+        margin-right: 8px;
+    }
+    .add-btn{
+        width: 50px;
+        height: 50px;
+    }
+    .tasks{
+        max-height: 500px;
+    }
+    .task-name{
+        max-width: 110px;
+    }
+}
+
