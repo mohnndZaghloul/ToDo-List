@@ -6,7 +6,8 @@ const emptyDiv = CrtElement('div','','empty');
 const emptySpan = CrtElement('span','There Is No Tasks','empty-text');
 
 window.onload = () => {
-    let arr = JSON.parse(localStorage.getItem('todo-list'));
+    const arr = JSON.parse(localStorage.getItem('todo-list')) || [];
+    console.log(arr);
     if (arr[0] == null) {
         emptyDiv.appendChild(emptySpan);
         tasksDiv.appendChild(emptyDiv);
