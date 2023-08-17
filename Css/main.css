@@ -7,10 +7,10 @@
     -o-box-sizing: border-box;
 }
 :root{
-    --mainColor: #6F1E51;
-    --liteMain: #833471;
-    --secondColor: #D980FA;
-    --liteSecond: #FDA7DF;
+    --mainColor: #58B19F;
+    --liteMain: #9AECDB;
+    --secondColor: #2f3640;
+    --liteSecond: #353b48;
     --delete: #EA2027;
     --update: #12CBC4;
     --edit: #F79F1F;
@@ -33,12 +33,12 @@ html{
   }
   /* Track */
   ::-webkit-scrollbar-track {
-    background: var(--secondColor);
+    background: var(--mainColor);
   }
   
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: var(--mainColor);
+    background: var(--secondColor);
   }
   
   /* Handle on hover */
@@ -70,7 +70,7 @@ html{
 .input-task{
     width: 100%;
     font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
-    color: white;
+    color: var(--secondColor);
     outline: none;
     border: none;
     padding: 10px 70px 10px 20px;
@@ -109,7 +109,8 @@ html{
     align-items: center;
     padding: 20px;
     border-radius: 16px;
-    background-color: #83347188;
+    color: var(--secondColor);
+    background-color: var(--liteMain);
 }
 .task:not(:last-child){
     margin-bottom: 8px;
