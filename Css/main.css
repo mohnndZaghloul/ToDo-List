@@ -75,9 +75,14 @@ html{
     border: none;
     padding: 10px 70px 10px 20px;
     font-size: 2rem;
+    border: var(--liteMain) 3px solid;
     background-color: var(--liteMain);
-    border-radius: 16px
+    border-radius: 20px
 }
+.input-task:focus {
+    border: var(--secondColor) 3px solid;
+}
+
 .add-btn{
     color: white;
     background-color: var(--secondColor);
